@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>RoverAssist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>RoverAssist</h1>
+    <p>Autonomous Load-Carrying Robot</p>
+
+    <section class="panel">
+      <h2>Robot Status</h2>
+      <p>Connection: Not connected</p>
+      <p>Battery: Not available</p>
+      <p>Mode: <span id="mode">Idle</span></p>
+    </section>
+
+    <section class="panel">
+      <h2>Operating Modes</h2>
+      <button onclick="followMode()">Follow Me</button>
+      <button onclick="navigationMode()">
+        Point A to B
+      </button>
+      <button class="stop" onclick="stopRobot()">
+        STOP
+      </button>
+    </section>
+
+    <section class="panel">
+      <h2>iPhone GPS</h2>
+      <button onclick="startGPS()">Start GPS</button>
+      <button onclick="stopGPS()">Stop GPS</button>
+      <p>Latitude: <span id="latitude">—</span></p>
+      <p>Longitude: <span id="longitude">—</span></p>
+      <p>Accuracy: <span id="accuracy">—</span></p>
+      <p id="gpsStatus">GPS inactive</p>
+    </section>
+
+    <small>
+      Prototype only. No commands are sent to a robot.
+    </small>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
